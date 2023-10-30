@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.line {
+  text-decoration-line: line-through;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 37%, rgb(0, 212, 255) 100%);
+  min-height: 100vh;
+}
+
+#todo {
+  max-width: 760px;
+  width: 100%;
+}
+
+.todo {
+  color: #000;
+  background: #fff;
+  padding: 45px 55px;
+  border-radius: 10px;
+}
+.todo .todo-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.todo .todo-header .header {
+  margin-bottom: 3px;
+}
+.todo .todo-header .header p {
+  color: #c70039;
+  font-size: 14px;
+  padding: 4px 0;
+}
+.todo .todo-header .header h1 {
+  font-size: 29px;
+}
+.todo .todo-header .todo-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo .todo-header .todo-add input {
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 11px 13px;
+  border-radius: 8px;
+  width: 100%;
+}
+.todo .todo-header .todo-add .delete #delete-all {
+  background-color: #c70039;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.todo .todo-header .todo-add .add {
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  padding: 7px;
+  background: #000;
+  color: #fff;
+  margin: 0 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.todo .todo-header .todo-add .add::placeholder {
+  font-size: 18px;
+  font-weight: bold;
+}
+.todo .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo .todo-item .icons {
+  display: flex;
+  gap: 10px;
+}
+.todo .todo-item .icons .edit {
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  border: 1px solid #ccc;
+  background: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo .todo-item .icons .save {
+  display: none;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  background: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo .todo-content {
+  max-width: 100%;
+  margin-top: 25px;
+}
+.todo .todo-content li {
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border: 1px solid #739072;
+  padding: 10px 25px;
+}/*# sourceMappingURL=style.css.map */

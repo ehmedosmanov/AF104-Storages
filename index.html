@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section id="todo">
+      <div class="container">
+        <div class="todo">
+          <div class="todo-header">
+            <div class="header">
+              <h1>Todo</h1>
+              <p class="text-danger" id="validation"></p>
+            </div>
+            <div class="todo-add">
+              <input type="text" id="todoInput" placeholder="Todo..." />
+              <span class="add">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+              <span class="delete">
+                <button id="delete-all">Delete All</button>
+              </span>
+            </div>
+          </div>
+          <div class="todo-content">
+            <ul class="todo-items"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
