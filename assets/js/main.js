@@ -6,6 +6,7 @@ const deleteAll = document.querySelector('#delete-all')
 const todoArrLocal = getLocalStorage('data')
 
 todoInput.focus()
+//Data
 let data = []
 
 if (todoArrLocal) {
@@ -15,6 +16,7 @@ if (todoArrLocal) {
   })
 }
 
+//Create element for Todos
 function createTodoElement(type, content, classnames) {
   const element = document.createElement(type)
   element.textContent = content
@@ -22,6 +24,7 @@ function createTodoElement(type, content, classnames) {
   return element
 }
 
+//Create a task element
 function createTodo(text, index) {
   const todoItemCreate = createTodoElement('li', '', 'todo-item')
   const todoTextCreate = createTodoElement('p', text, 'text')
@@ -35,6 +38,7 @@ function createTodo(text, index) {
   todoItemCreate.append(todoTextCreate, todoIconBoxCreate)
   todoItems.append(todoItemCreate)
 
+  //Edit
   todoEditBtn.addEventListener('click', () => {
     todoInput.value = data[index]
     todoInput.focus()
@@ -42,6 +46,7 @@ function createTodo(text, index) {
     todoSaveBtn.style.display = 'inline-block'
   })
 
+  //Save
   todoSaveBtn.addEventListener('click', () => {
     data[index] = todoInput.value
     setLocalStorage('data', data)
@@ -70,18 +75,22 @@ addTodo.addEventListener('click', e => {
   todoInput.focus()
 })
 
+//Delete All Datas
 deleteAll.addEventListener('click', () => {
   data = []
   localStorage.clear()
   todoItems.innerHTML = ''
 })
 
+//Keypress event Enter key add Task
 document.body.onkeypress = e => (e.key === 'Enter' ? addTodo.click() : null)
 
+//Function save data to LocalStorage
 function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data))
 }
 
+//Function for get data from LocalStorage
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key))
 }
